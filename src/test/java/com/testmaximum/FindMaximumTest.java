@@ -39,4 +39,58 @@ public void thirdPosition_ifMaximum_returnsThirdPosition() {
     maximumNumber = testMaximum.findMaximumInteger(2, 3, 1);
     Assert.assertEquals(3, maximumNumber);
 }
+/**
+ * Function to test if first float position is maximum
+ */
+@Test
+public void firstFloatPosition_ifMaximum_returnsFirstPosition()
+{
+	TestMaximum maximum=new TestMaximum();
+	float max=maximum.findMaximumFloat((float)8.7,(float)8.8,(float)8.9);
+	Assert.assertEquals(8.9,max,0.01);
 }
+
+/**
+ * Function to test if second float position is maximum
+ */
+@Test
+public void secondFloatPosition_ifMaximum_returnsSecondPosition() {
+    TestMaximum maximum = new TestMaximum();
+    double max = maximum.findMaximumFloat((float)8.7, (float)8.8, (float)8.9);
+    Assert.assertEquals(8.9,max,0.01);
+}
+
+/**
+ * Function to test if third float position is maximum
+ */
+@Test
+public void thirdFloatPosition_ifMaximum_returnsThirdPosition() {
+    TestMaximum maximum = new TestMaximum();
+    double max = maximum.findMaximumFloat((float)8.7, (float)8.8, (float)8.9);
+    Assert.assertEquals(8.9, max, 0.01);
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
