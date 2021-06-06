@@ -5,8 +5,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class FindMaximumTest {
-
-	/**
+    /**
      * UC1.1, UC1.2 and UC1.3
      */
     @Test
@@ -17,7 +16,7 @@ public class FindMaximumTest {
 
     @Test
     public void MaxValueAtSecondPosition() {
-        Integer max = TestMaximum.findMax(3,7,2);
+        Integer max =TestMaximum.findMax(3,7,2);
         Assert.assertSame(7, max);
     }
 
@@ -48,13 +47,13 @@ public class FindMaximumTest {
 
     @Test
     public void secondFloatMaxValueReturnSecond() {
-        Float max = TestMaximum.findMax(3.01f, 9.01f, 6.01f);
+        Float max =TestMaximum.findMax(3.01f, 9.01f, 6.01f);
         Assert.assertThat(max, CoreMatchers.equalTo(9.01f));
     }
 
     @Test
     public void thirdFloatMaxValueReturnThird() {
-        Float max = TestMaximum.findMax(6.01f, 3.01f, 9.01f);
+        Float max =TestMaximum.findMax(6.01f, 3.01f, 9.01f);
         Assert.assertThat(max, CoreMatchers.equalTo(9.01f));
     }
 
@@ -63,20 +62,20 @@ public class FindMaximumTest {
      */
     @Test
     public void firstStringMaxReturnFirst() {
-        String max = TestMaximum.findMax("Girl","Boy","Animal");
-        Assert.assertThat(max, CoreMatchers.equalTo("Girl"));
+        String max =TestMaximum.findMax("Apple", "Peach", "Banana");
+        Assert.assertThat(max, CoreMatchers.equalTo("Peach"));
     }
 
     @Test
     public void secondStringMaxReturnSecond() {
-        String max = TestMaximum.findMax("Boy","Girl","Animal");
-        Assert.assertThat(max, CoreMatchers.equalTo("Girl"));
+        String max = TestMaximum.findMax("Apple", "Peach", "Banana");
+        Assert.assertThat(max, CoreMatchers.equalTo("Peach"));
     }
 
     @Test
     public void thirdStringMaxReturnThird() {
-        String max =TestMaximum.findMax("Boy","Animal","Girl");
-        Assert.assertThat(max, CoreMatchers.equalTo("Girl"));
+        String max = TestMaximum.findMax("Apple", "Peach", "Banana");
+        Assert.assertThat(max, CoreMatchers.equalTo("Peach"));
     }
 
     /**
@@ -89,8 +88,8 @@ public class FindMaximumTest {
     }
     @Test
     public void ReturnMaxString() {
-        String max = TestMaximum.findAnyMax("Boy","Girl","Animal");
-        Assert.assertThat(max, CoreMatchers.equalTo("Girl"));
+        String max = TestMaximum.findAnyMax("Apple", "Peach", "Banana");
+        Assert.assertThat(max, CoreMatchers.equalTo("Peach"));
     }
     @Test
     public void ReturnMaxInteger() {
@@ -113,8 +112,8 @@ public class FindMaximumTest {
     }
     @Test
     public void anyTypeReturnMaxString() {
-        String max = new TestMaximum<String>("Boy", "Girl", "Animal").findAnyMax();
-        Assert.assertThat(max, CoreMatchers.equalTo("Girl"));
+        String max = new TestMaximum<String>("Apple", "Peach", "Banana").findAnyMax();
+        Assert.assertThat(max, CoreMatchers.equalTo("Peach"));
     }
 
     /**
